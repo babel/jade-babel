@@ -8,7 +8,7 @@ Usage example:
 var jade = require('jade');
 var jadeTraceur = require('jade-traceur');
 
-jade.filters.traceur =  jadeTraceur({experimental: true});
+jade.filters.traceur = jadeTraceur({experimental: true});
 ```
 OR
 
@@ -17,4 +17,23 @@ var jade = require('jade');
 var jadeTraceur = require('jade-traceur');
 
 jade = jadeTraceur({experimental: true}, jade);
+```
+
+
+and then
+
+```jade
+script
+	:traceur
+		console.log('Hello World !!!')
+		class Person{
+			constructor(name){
+				this.name = name
+			}
+			sayName(){
+			console.log(`Hello, my name is ${this.name}`)
+			}
+		}
+		var pers = new Person('Apoxx')
+		pers.sayName()
 ```
