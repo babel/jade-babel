@@ -23,17 +23,18 @@ jade = jadeTraceur({experimental: true}, jade);
 and then
 
 ```jade
+script(src="traceur-runtime.js")
 script
 	:traceur
-		console.log('Hello World !!!')
+		console.log('Hello World !!!');
 		class Person{
 			constructor(name){
-				this.name = name
+				this.name = name;
 			}
 			sayName(){
-			console.log(`Hello, my name is ${this.name}`)
+				console.log(`Hello, my name is ${this.name}`);
 			}
 		}
-		var pers = new Person('Apoxx')
-		pers.sayName()
+		var pers = new Person('Apoxx');
+		pers.sayName();
 ```
