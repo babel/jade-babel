@@ -1,7 +1,8 @@
-var traceur = require('traceur');
+var Compiler = require('traceur').NodeCompiler;
 module.exports = function(options, jade){
 	var filter = function(contents){
-		return traceur.compile(contents, options).js;
+		var compiler = new Compiler(options);
+		return compiler.compile(contents);
 	}
 	if(jade){
 		jade.filters.traceur = filter;
