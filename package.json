@@ -1,6 +1,6 @@
 {
   "name": "jade-traceur",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple module which adds a traceur filter to jade.",
   "main": "index.js",
   "author": "Apox <npm@apox.fr>",
