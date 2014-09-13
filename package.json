@@ -5,7 +5,15 @@
   "main": "index.js",
   "author": "Apox <npm@apox.fr>",
   "license": "MIT",
+  "scripts": {
+    "test" : "mocha test/test.js"
+  },
   "dependencies": {
-    "traceur": "0.0.61"
+    "traceur": "0.0.62"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "jade": "^1.6.0"
   }
 }
