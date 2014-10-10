@@ -1,12 +1,11 @@
-var traceur = require('traceur');
-var Compiler = traceur.NodeCompiler;
+var to5 = require('6to5');
+
 module.exports = function(options, jade){
 	var filter = function(contents){
-		var compiler = new Compiler(traceur.commonJSOptions(options));
-		return compiler.compile(contents);
+		return to5.transform(contents, options).code;
 	}
 	if(jade){
-		jade.filters.traceur = filter;
+		jade.filters.to5 = filter;
 		return jade;
 	}
 	else return filter;

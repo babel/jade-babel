@@ -1,31 +1,30 @@
-#JADE-TRACEUR
+#Jade-6to5
 
-This is a simple module which adds a traceur filter to jade.
+This is a simple module which adds a 6to5 (ES6 to ES5) filter to jade.
 
 Usage example:
 
 ```js
 var jade = require('jade');
-var jadeTraceur = require('jade-traceur');
+var to5 = require('jade-6to5');
 
-jade.filters.traceur = jadeTraceur({experimental: true});
+jade.filters.traceur = to5({});
 ```
 OR
 
 ```js
 var jade = require('jade');
-var jadeTraceur = require('jade-traceur');
+var to5 = require('jade-6to5');
 
-jade = jadeTraceur({experimental: true}, jade);
+jade = to5({}, jade);
 ```
 
 
 and then
 
 ```jade
-script(src="traceur-runtime.js")
 script
-	:traceur
+	:to5
 		console.log('Hello World !!!');
 		class Person{
 			constructor(name){

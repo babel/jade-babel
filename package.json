@@ -1,15 +1,15 @@
 {
-  "name": "jade-traceur",
-  "version": "0.0.3",
-  "description": "Simple module which adds a traceur filter to jade.",
+  "name": "jade-6to5",
+  "version": "0.0.1",
+  "description": "Simple module which adds a 6to5 (ES6 to ES5) filter to jade.",
   "main": "index.js",
   "author": "Apox <npm@apox.fr>",
   "license": "MIT",
   "scripts": {
-    "test" : "mocha test/test.js"
+    "test": "mocha test/test.js"
   },
   "dependencies": {
-    "traceur": "0.0.62"
+    "6to5": "^1.7.9"
   },
   "devDependencies": {
     "chai": "*",
