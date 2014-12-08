@@ -1,6 +1,6 @@
 {
   "name": "jade-6to5",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple module which adds a 6to5 (ES6 to ES5) filter to jade.",
   "main": "index.js",
   "author": "Apox <npm@apox.fr>",
@@ -18,6 +18,6 @@
   "devDependencies": {
     "chai": "*",
     "mocha": "*",
-    "jade": "^1.6.0"
+    "jade": "^1.8.1"
   }
 }

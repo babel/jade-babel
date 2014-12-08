@@ -2,14 +2,19 @@
 
 This is a simple module which adds a 6to5 (ES6 to ES5) filter to jade.
 
-Usage example:
+##Installation
+
+    $ npm install jade-6to5
+
+##Usage
 
 ```js
 var jade = require('jade');
 var to5 = require('jade-6to5');
 
-jade.filters.traceur = to5({});
+jade.filters.to5 = to5({});
 ```
+
 OR
 
 ```js
@@ -20,7 +25,7 @@ jade = to5({}, jade);
 ```
 
 
-and then
+Now you can use ES6 in your jade templates as following.
 
 ```jade
 script
