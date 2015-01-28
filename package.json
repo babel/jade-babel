@@ -13,7 +13,7 @@
     "test": "mocha test/test.js"
   },
   "dependencies": {
-    "6to5": "*"
+    "6to5-core": "^3.0.0"
   },
   "devDependencies": {
     "chai": "*",
