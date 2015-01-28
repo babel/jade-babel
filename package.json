@@ -1,14 +1,14 @@
 {
   "name": "jade-6to5",
-  "version": "0.0.3",
+  "version": "3.0.0",
   "description": "Simple module which adds a 6to5 (ES6 to ES5) filter to jade.",
   "main": "index.js",
   "author": "Apox <npm@apox.fr>",
   "license": "MIT",
-  "repository" : {
-  	"type" : "git",
-  	"url" : "https://github.com/Apoxx/jade-6to5.git"
-  	},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Apoxx/jade-6to5.git"
+  },
   "scripts": {
     "test": "mocha test/test.js"
   },
