@@ -1,19 +1,19 @@
 {
-  "name": "jade-6to5",
+  "name": "jade-babel",
   "version": "3.0.0",
-  "description": "Simple module which adds a 6to5 (ES6 to ES5) filter to jade.",
+  "description": "Simple module which adds a babel (ES6 to ES5) filter to jade.",
   "main": "index.js",
   "author": "Apox <npm@apox.fr>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Apoxx/jade-6to5.git"
+    "url": "https://github.com/babel/jade-babel.git"
   },
   "scripts": {
     "test": "mocha test/test.js"
   },
   "dependencies": {
-    "6to5-core": "^3.0.0"
+    "babel-core": "^4.0.0"
   },
   "devDependencies": {
     "chai": "*",

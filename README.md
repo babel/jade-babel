@@ -1,27 +1,27 @@
-#Jade-6to5
+#Jade-babel
 
-This is a simple module which adds a 6to5 (ES6 to ES5) filter to jade.
+This is a simple module which adds a babel (ES6 to ES5) filter to jade.
 
 ##Installation
 
-    $ npm install jade-6to5
+    $ npm install jade-babel
 
 ##Usage
 
 ```js
 var jade = require('jade');
-var to5 = require('jade-6to5');
+var babel = require('jade-babel');
 
-jade.filters.to5 = to5({});
+jade.filters.babel = babel({});
 ```
 
 OR
 
 ```js
 var jade = require('jade');
-var to5 = require('jade-6to5');
+var babel = require('jade-babel');
 
-jade = to5({}, jade);
+jade = babel({}, jade);
 ```
 
 
@@ -29,7 +29,7 @@ Now you can use ES6 in your jade templates as following.
 
 ```jade
 script
-	:to5
+	:babel
 		console.log('Hello World !!!');
 		class Person{
 			constructor(name){
