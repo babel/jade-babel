@@ -1,6 +1,6 @@
 {
   "name": "jade-babel",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Simple module which adds a babel (ES6 to ES5) filter to jade.",
   "main": "index.js",
   "author": "Apox <npm@apox.fr>",
