@@ -1,14 +1,27 @@
-require('chai').should();
+import path from 'path';
 
-var jade = require('jade');
-var jadeTraceur = require('..');
+import jade from 'jade';
+import { expect } from 'chai';
+import dedent from 'dedent';
 
-describe('compile', function(){
-	var expected ='<html><header></header><body><script>\"use strict\";\n\nvar Test = function Test(test) {\n  babelHelpers.classCallCheck(this, Test);\n\n  this.test = test;\n};</script></body></html>';
-	it('should be the right compiled output', function(){
-		var jadeT = jadeTraceur({ externalHelpers: true }, jade);
-		var compiled = jadeT.compileFile('./test/jade/test.jade');
-		var result = compiled();
-		result.should.be.equal(expected);
-	});
+import jadeBabel from '../src';
+
+describe('compile', () => {
+  it('should be the right compiled output', () => {
+    const expected = dedent`
+      <html><header></header><body><script>"use strict";
+
+      function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) \
+      { throw new TypeError("Cannot call a class as a function"); } }
+
+      var Test = function Test(test) {
+        _classCallCheck(this, Test);
+
+        this.test = test;
+      };</script></body></html>`;
+    const jadeCompiler = jadeBabel({ babelrc: false, presets: ['es2015'] }, jade);
+    const template = jadeCompiler.compileFile(path.join(__dirname, 'fixtures', 'test.jade'));
+    const output = template();
+    expect(output).to.be.equal(expected);
+  });
 });
