@@ -4,7 +4,9 @@ This is a simple module which adds a Babel filter to jade.
 
 ## Installation
 
+```shell
 npm install jade-babel
+```
 
 ## Usage
 
