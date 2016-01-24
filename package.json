@@ -1,8 +1,8 @@
 {
   "name": "jade-babel",
   "version": "5.0.0",
-  "description": "Simple module which adds a babel (ES6 to ES5) filter to jade.",
-  "main": "index.js",
+  "description": "Simple module which adds a Babel filter to jade.",
+  "main": "lib",
   "author": "Apox <npm@apox.fr>",
   "license": "MIT",
   "repository": {
@@ -10,14 +10,18 @@
     "url": "https://github.com/babel/jade-babel.git"
   },
   "scripts": {
-    "test": "mocha test/test.js"
+    "build": "babel src --out-dir lib",
+    "test": "mocha test --compilers js:babel-core/register"
   },
   "dependencies": {
-    "babel-core": "^5.0.0"
+    "babel-core": "^6.4.0"
   },
   "devDependencies": {
-    "chai": "*",
-    "mocha": "*",
-    "jade": "^1.8.1"
+    "babel-cli": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.4.1",
+    "dedent": "^0.6.0",
+    "jade": "^1.11.0",
+    "mocha": "^2.3.4"
   }
 }
